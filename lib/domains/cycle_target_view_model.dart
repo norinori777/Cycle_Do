@@ -18,10 +18,10 @@ class CycleTargetViewModel {
     required this.accessedDate,
   });
 
-  factory CycleTargetViewModel.fromCycleTarget(CycleTarget cycleTarget) {
+  factory CycleTargetViewModel.create(CycleTarget cycleTarget) {
     return CycleTargetViewModel(
       id: cycleTarget.id,
-      iconPath: cycleTarget.cycle.iconSvgGen.path,
+      iconPath: cycleTarget.cycle.getIconSvgGen.path,
       title: cycleTarget.title.getTitle,
       content: cycleTarget.content.getContent,
       createdDate: cycleTarget.createdDate,

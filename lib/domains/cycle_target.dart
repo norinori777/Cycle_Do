@@ -1,14 +1,13 @@
 // lib/domains/CycleTarget.dart
-import 'package:cycle_do/domains/title.dart';
-
-import 'content.dart';
+import 'package:cycle_do/domains/cycle_target_title.dart';
+import 'package:cycle_do/domains/cycle_target_content.dart';
 import 'cycle.dart';
 
 class CycleTarget {
   final int id;
   final Cycle cycle;
-  final Title title;
-  final Content content;
+  final CycleTargetTitle title;
+  final CycleTargetContent content;
   final DateTime createdDate;
   final DateTime accessedDate;
 

@@ -12,7 +12,7 @@ enum Cycle {
 
   const Cycle({required this.cycle,required this.time});
 
-  factory Cycle.fromCycle(int cycle) {
+  factory Cycle.create(int cycle) {
     switch (cycle) {
       case 1:
         return Cycle.one;
@@ -32,7 +32,7 @@ enum Cycle {
   int get cycleTime => time;
   int get cycleNumber => cycle;
 
-  SvgGenImage get iconSvgGen {
+  SvgGenImage get getIconSvgGen {
     switch (this) {
       case Cycle.one:
         return Assets.circle1;

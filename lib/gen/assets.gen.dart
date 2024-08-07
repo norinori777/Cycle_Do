@@ -15,6 +15,7 @@ import 'package:vector_graphics/vector_graphics.dart';
 class Assets {
   Assets._();
 
+  static const SvgGenImage circle01 = SvgGenImage('assets/circle-01.svg');
   static const SvgGenImage circle1 = SvgGenImage('assets/circle-1.svg');
   static const SvgGenImage circle2 = SvgGenImage('assets/circle-2.svg');
   static const SvgGenImage circle3 = SvgGenImage('assets/circle-3.svg');
@@ -24,7 +25,7 @@ class Assets {
 
   /// List of all assets
   static List<SvgGenImage> get values =>
-      [circle1, circle2, circle3, circle4, circle5, recycle];
+      [circle01, circle1, circle2, circle3, circle4, circle5, recycle];
 }
 
 class SvgGenImage {

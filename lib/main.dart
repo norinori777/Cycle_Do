@@ -1,3 +1,4 @@
+import 'package:cycle_do/pages/list_cycle_targets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
@@ -104,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        leading: SvgPicture.asset(Assets.recycle.path, width: 68, height: 68, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+        leading: SvgPicture.asset(Assets.recycle.path, width: 62, height: 62, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
         title: Text(widget.title),
         actions: [
           IconButton(onPressed: (){}, icon: Assets.recycle.svg(width: 72, height: 72))
@@ -141,7 +142,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               DateFormat.yMEd().format(DateTime.now()),
             ),
-            Text(l10n.helloWorld),
+            ElevatedButton(
+              child: Text(l10n.helloWorld),
+              onPressed: () {
+                final route = MaterialPageRoute(builder: (context) => ListCycleTargetPage());
+                Navigator.of(context).push(route);
+              },
+            ),
           ],
         ),
       ),
